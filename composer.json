@@ -1,0 +1,8 @@
+{
+    "name": "jishovon/sbbl-bank-management-php-full-project",
+    "description": "This is a full-stack web application designed to simulate a complete bank management system. The project features a public-facing front-end website and a secure back-end with three distinct user portals (Admin, Staff, and Client), all built with native PHP and a MySQL database.",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "RC",
+    "require": {}
+}
