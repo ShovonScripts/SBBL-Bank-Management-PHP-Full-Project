@@ -105,7 +105,7 @@ $stmt->close();
 //Withdrawal Computations
 
 ?>
-<!-- Log on to codeastro.com for more projects! -->
+<!-- Log on to jis.digital for more projects! -->
 <!DOCTYPE html>
 <html lang="en">
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -258,7 +258,7 @@ $stmt->close();
                       <i class="fas fa-times"></i>
                     </button>
                   </div>
-                </div><!-- Log on to codeastro.com for more projects! -->
+                </div><!-- Log on to jis.digital for more projects! -->
                 <!-- /.card-header -->
                 <div class="card-body">
                   <div class="row">
@@ -343,7 +343,7 @@ $stmt->close();
                       <i class="fas fa-times"></i>
                     </button>
                   </div>
-                </div><!-- Log on to codeastro.com for more projects! -->
+                </div><!-- Log on to jis.digital for more projects! -->
                 <!-- /.card-header -->
                 <div class="card-body p-0">
                   <div class="table-responsive">
@@ -384,7 +384,7 @@ $stmt->close();
                             <td><?php echo $row->tr_code; ?></a></td>
                             <td><?php echo $row->account_number; ?></td>
                             <td><?php echo $alertClass; ?></td>
-                            <td>$ <?php echo $row->transaction_amt; ?></td>
+                            <td>৳ <?php echo $row->transaction_amt; ?></td>
                             <td><?php echo $row->client_name; ?></td>
                             <td><?php echo date("d-M-Y h:m:s ", strtotime($transTstamp)); ?></td>
                           </tr>
@@ -393,7 +393,7 @@ $stmt->close();
 
                       </tbody>
                     </table>
-                  </div><!-- Log on to codeastro.com for more projects! -->
+                  </div><!-- Log on to jis.digital for more projects! -->
                   <!-- /.table-responsive -->
                 </div>
                 <!-- /.card-body -->

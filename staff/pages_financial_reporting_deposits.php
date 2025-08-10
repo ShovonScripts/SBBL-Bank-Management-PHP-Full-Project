@@ -11,7 +11,7 @@ $staff_id = $_SESSION['staff_id'];
 <html>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <?php include("dist/_partials/head.php"); ?>
-<!-- Log on to codeastro.com for more projects! -->
+<!-- Log on to jis.digital for more projects! -->
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
   <div class="wrapper">
     <!-- Navbar -->
@@ -62,7 +62,7 @@ $staff_id = $_SESSION['staff_id'];
 
                     </tr>
                   </thead>
-                  <tbody><!-- Log on to codeastro.com for more projects! -->
+                  <tbody><!-- Log on to jis.digital for more projects! -->
                     <?php
                     //Get latest deposits transactions 
                     $ret = "SELECT * FROM  ib_transactions  WHERE tr_type = 'Deposit' ";
@@ -89,7 +89,7 @@ $staff_id = $_SESSION['staff_id'];
                         <td><?php echo $cnt; ?></td>
                         <td><?php echo $row->tr_code; ?></a></td>
                         <td><?php echo $row->account_number; ?></td>
-                        <td>$ <?php echo $row->transaction_amt; ?></td>
+                        <td>৳ <?php echo $row->transaction_amt; ?></td>
                         <td><?php echo $row->client_name; ?></td>
                         <td><?php echo date("d-M-Y h:m:s ", strtotime($transTstamp)); ?></td>
                       </tr>
@@ -105,7 +105,7 @@ $staff_id = $_SESSION['staff_id'];
           <!-- /.col -->
         </div>
         <!-- /.row -->
-      </section><!-- Log on to codeastro.com for more projects! -->
+      </section><!-- Log on to jis.digital for more projects! -->
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->

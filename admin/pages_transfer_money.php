@@ -191,7 +191,7 @@ if (isset($_POST['deposit'])) {
                                                     <input type="text" readonly value="<?php echo $amt; ?>" required class="form-control" id="exampleInputEmail1">
                                                 </div>
                                                 <div class=" col-md-4 form-group">
-                                                    <label for="exampleInputPassword1">Amount Transfered($)</label>
+                                                    <label for="exampleInputPassword1">Amount Transfered(৳)</label>
                                                     <input type="text" name="transaction_amt" required class="form-control" id="exampleInputEmail1">
                                                 </div>
                                             </div>

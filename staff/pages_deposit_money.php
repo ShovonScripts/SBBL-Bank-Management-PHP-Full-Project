@@ -174,7 +174,7 @@ if (isset($_POST['deposit'])) {
                                                     <input type="text" name="tr_code" readonly value="<?php echo $_transcode; ?>" required class="form-control" id="exampleInputEmail1">
                                                 </div>
                                                 <div class=" col-md-6 form-group">
-                                                    <label for="exampleInputPassword1">Amount Deposited($)</label>
+                                                    <label for="exampleInputPassword1">Amount Deposited(৳)</label>
                                                     <input type="text" name="transaction_amt" required class="form-control" id="exampleInputEmail1">
                                                 </div>
                                                 <div class=" col-md-4 form-group" style="display:none">

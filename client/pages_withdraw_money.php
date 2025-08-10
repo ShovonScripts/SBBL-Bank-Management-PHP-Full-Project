@@ -2,10 +2,6 @@
 session_start();
 include('conf/config.php');
 include('conf/checklogin.php');
-require_once 'includes/send_mail.php'; 
-require_once 'includes/send_mail.php';
-
-
 check_login();
 $client_id = $_SESSION['client_id'];
 
@@ -34,7 +30,6 @@ if (isset($_POST['withdrawal'])) {
     *   
     */
 
-
     $result = "SELECT SUM(transaction_amt) FROM  ib_transactions  WHERE account_id=?";
     $stmt = $mysqli->prepare($result);
     $stmt->bind_param('i', $account_id);
@@ -46,11 +41,9 @@ if (isset($_POST['withdrawal'])) {
 
     if ($transaction_amt > $amt) {
         $err = "You Do Not Have Sufficient Funds In Your Account.Your Existing Amount is $ $amt";
-    } 
-    
-    else 
-    
-    {
+    } else {
+
+
         //Insert Captured information to a database table
         $query = "INSERT INTO ib_transactions (tr_code, account_id, acc_name, account_number, acc_type,  tr_type, tr_status, client_id, client_name, client_national_id, transaction_amt, client_phone) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
         $notification = "INSERT INTO  ib_notifications (notification_details) VALUES (?)";
@@ -64,25 +57,7 @@ if (isset($_POST['withdrawal'])) {
         //declare a varible which will be passed to alert function
         if ($stmt && $notification_stmt) {
             $success = "Funds Withdrawled";
-
-            $client_email = $row->client_email; // fetched from query
-            $subject = "SBBL iBanking: Withdrawal Confirmation";
-            $body = "
-                <h3>Dear {$client_name},</h3>
-                <p>Your recent withdrawal has been successfully processed.</p>
-                <p><strong>Account Number:</strong> {$account_number}</p>
-                <p><strong>Transaction Code:</strong> {$tr_code}</p>
-                <p><strong>Withdrawn Amount:</strong> ৳" . abs($transaction_amt) . "</p>
-                <p><strong>Status:</strong> Success</p>
-                <br>
-                <p>If you didn’t authorize this, please contact us.</p>
-                <p>Thanks,<br>SBBL Bank</p>
-            ";
-
-            sendEmail($client_email, $subject, $body);
-        }
-        
-        else {
+        } else {
             $err = "Please Try Again Or Try Later";
         }
 

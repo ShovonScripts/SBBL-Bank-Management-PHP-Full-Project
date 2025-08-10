@@ -1,8 +1,8 @@
-**Log on to codeastro.com for more projects!***
+**Log on to jis.digital for more projects!***
 
 **Database Name: internetbanking**
 
-**Developed by Martin Mbithi**
+**Developed by ShovonScripts**
 
 **Recommended PHP Version 5, 7, 8**
 
@@ -10,12 +10,12 @@
 **Admin Login Details**
 
 Email	: admin@mail.com
-Password: codeastro.com
+Password: jis.digital
 
 
 **Staff Login Details**
 
 Email	: staff@mail.com
-Password: codeastro.com
+Password: jis.digital
 
 

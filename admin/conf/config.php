@@ -1,7 +1,7 @@
 <?php
 // Database configuration
-$dbuser = "u519977364_sbbl";
-$dbpass = "Sbbl@123";
+$dbuser = "root";
+$dbpass = "";
 $host = "localhost";
 $db = "u519977364_sbbl";
 

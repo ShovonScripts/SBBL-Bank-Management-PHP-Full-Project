@@ -373,7 +373,7 @@ $stmt->close();
                           <th>Timestamp</th>
                         </tr>
                       </thead>
-                      <tbody><!-- Log on to codeastro.com for more projects! -->
+                      <tbody>
                         <?php
                         //Get latest transactions 
                         $ret = "SELECT * FROM `ib_transactions` ORDER BY `ib_transactions`.`created_at` DESC ";
@@ -399,7 +399,7 @@ $stmt->close();
                             <td><?php echo $row->tr_code; ?></a></td>
                             <td><?php echo $row->account_number; ?></td>
                             <td><?php echo $alertClass; ?></td>
-                            <td>$ <?php echo $row->transaction_amt; ?></td>
+                            <td>৳ <?php echo $row->transaction_amt; ?></td>
                             <td><?php echo $row->client_name; ?></td>
                             <td><?php echo date("d-M-Y h:m:s ", strtotime($transTstamp)); ?></td>
                           </tr>

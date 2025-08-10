@@ -180,7 +180,7 @@ if (isset($_POST['deposit'])) {
                                                 </div>
 
                                                 <div class=" col-md-6 form-group">
-                                                    <label for="exampleInputPassword1">Amount Transfered($)</label>
+                                                    <label for="exampleInputPassword1">Amount Transfered(৳)</label>
                                                     <input type="text" name="transaction_amt" required class="form-control" id="exampleInputEmail1">
                                                 </div>
                                             </div>

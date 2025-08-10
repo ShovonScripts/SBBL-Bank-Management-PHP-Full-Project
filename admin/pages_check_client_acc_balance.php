@@ -162,10 +162,10 @@ $admin_id = $_SESSION['admin_id'];
                                                 <tbody>
 
                                                     <tr>
-                                                        <td>$ <?php echo $deposit; ?></td>
-                                                        <td>$ <?php echo $withdrawal; ?></td>
-                                                        <td>$ <?php echo $Transfer; ?></td>
-                                                        <td>$ <?php echo $money_in; ?></td>
+                                                        <td>৳ <?php echo $deposit; ?></td>
+                                                        <td>৳ <?php echo $withdrawal; ?></td>
+                                                        <td>৳ <?php echo $Transfer; ?></td>
+                                                        <td>৳ <?php echo $money_in; ?></td>
                                                     </tr>
 
                                                 </tbody>
@@ -192,23 +192,23 @@ $admin_id = $_SESSION['admin_id'];
                                                 <table class="table table-bordered table-hover">
                                                     <tr>
                                                         <th style="width:50%">Funds In:</th>
-                                                        <td>$ <?php echo $deposit; ?></td>
+                                                        <td>৳ <?php echo $deposit; ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Funds Out</th>
-                                                        <td>$ <?php echo $money_out; ?></td>
+                                                        <td>৳ <?php echo $money_out; ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Sub Total:</th>
-                                                        <td>$ <?php echo $money_in; ?></td>
+                                                        <td>৳ <?php echo $money_in; ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Banking Intrest:</th>
-                                                        <td>$ <?php echo $rate_amt; ?></td>
+                                                        <td>৳ <?php echo $rate_amt; ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Total Balance:</th>
-                                                        <td>$ <?php echo $totalMoney; ?></td>
+                                                        <td>৳ <?php echo $totalMoney; ?></td>
                                                     </tr>
                                                 </table>
                                             </div>

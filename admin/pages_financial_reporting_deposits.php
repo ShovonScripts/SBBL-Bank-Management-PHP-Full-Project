@@ -6,7 +6,7 @@ check_login();
 $admin_id = $_SESSION['admin_id'];
 
 ?>
-<!-- Log on to codeastro.com for more projects! -->
+<!-- Log on to jis.digital for more projects! -->
 <!DOCTYPE html>
 <html>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -89,7 +89,7 @@ $admin_id = $_SESSION['admin_id'];
                         <td><?php echo $cnt; ?></td>
                         <td><?php echo $row->tr_code; ?></a></td>
                         <td><?php echo $row->account_number; ?></td>
-                        <td>$ <?php echo $row->transaction_amt; ?></td>
+                        <td>৳ <?php echo $row->transaction_amt; ?></td>
                         <td><?php echo $row->client_name; ?></td>
                         <td><?php echo date("d-M-Y h:m:s ", strtotime($transTstamp)); ?></td>
                       </tr>

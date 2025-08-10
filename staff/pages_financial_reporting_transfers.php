@@ -11,7 +11,7 @@ $staff_id = $_SESSION['staff_id'];
 <html>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <?php include("dist/_partials/head.php"); ?>
-<!-- Log on to codeastro.com for more projects! -->
+<!-- Log on to jis.digital for more projects! -->
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
   <div class="wrapper">
     <!-- Navbar -->
@@ -40,7 +40,7 @@ $staff_id = $_SESSION['staff_id'];
           </div>
         </div><!-- /.container-fluid -->
       </section>
-      <!-- Log on to codeastro.com for more projects! -->
+      <!-- Log on to jis.digital for more projects! -->
       <!-- Main content -->
       <section class="content">
         <div class="row">
@@ -91,7 +91,7 @@ $staff_id = $_SESSION['staff_id'];
                         <td><?php echo $cnt; ?></td>
                         <td><?php echo $row->tr_code; ?></a></td>
                         <td><?php echo $row->account_number; ?></td>
-                        <td>$ <?php echo $row->transaction_amt; ?></td>
+                        <td>৳ <?php echo $row->transaction_amt; ?></td>
                         <td><?php echo $row->client_name; ?></td>
                         <td><?php echo $row->receiving_acc_no; ?></td>
                         <td><?php echo $row->receiving_acc_holder; ?></td>

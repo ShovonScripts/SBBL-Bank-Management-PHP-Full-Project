@@ -2,29 +2,6 @@
 session_start();
 include('conf/config.php');
 include('conf/checklogin.php');
-require_once 'includes/send_mail.php'; 
-require_once 'includes/send_mail.php'; // Make sure this is included at the top if not already
-
-// Sender's email - fetch from DB if not available in $row
-$sender_email = $row->client_email ?? ''; // make sure your SELECT includes this
-$sender_name = $client_name;
-$receiver_email = ''; // will fetch below
-
-// ✅ Email to Sender
-$subject_sender = "SBBL iBanking: Transfer Confirmation";
-$body_sender = "
-    <h3>Dear {$sender_name},</h3>
-    <p>Your fund transfer has been completed successfully.</p>
-    <p><strong>Transaction Code:</strong> {$tr_code}</p>
-    <p><strong>Amount:</strong> ৳" . number_format($transaction_amt, 2) . "</p>
-    <p><strong>To Account:</strong> {$receiving_acc_no} ({$receiving_acc_holder})</p>
-    <br>
-    <p>If this was not you, please contact our support team immediately.</p>
-    <p>Thanks,<br>SBBL Bank</p>
-";
-
-sendEmail($sender_email, $subject_sender, $body_sender);
-
 check_login();
 $client_id = $_SESSION['client_id'];
 
@@ -90,27 +67,7 @@ if (isset($_POST['deposit'])) {
         //declare a varible which will be passed to alert function
         if ($stmt && $notification_stmt) {
             $success = "Money Transfered";
-
-                        // Sender's email - fetch from DB if not available in $row
-            $sender_email = $row->client_email ?? ''; // make sure your SELECT includes this
-            $sender_name = $client_name;
-            $receiver_email = ''; // will fetch below
-
-            // ✅ Email to Sender
-            $subject_sender = "SBBL iBanking: Transfer Confirmation";
-            $body_sender = "
-                <h3>Dear {$sender_name},</h3>
-                <p>Your fund transfer has been completed successfully.</p>
-                <p><strong>Transaction Code:</strong> {$tr_code}</p>
-                <p><strong>Amount:</strong> ৳" . number_format($transaction_amt, 2) . "</p>
-                <p><strong>To Account:</strong> {$receiving_acc_no} ({$receiving_acc_holder})</p>
-                <br>
-                <p>If this was not you, please contact our support team immediately.</p>
-                <p>Thanks,<br>SBBL Bank</p>
-            ";
-
-            sendEmail($sender_email, $subject_sender, $body_sender);
-                    }
+        }
 
 // Fetch receiving account info
 $receiver_query = "SELECT account_id, client_id, client_name, client_national_id, client_phone, acc_type FROM ib_bankaccounts WHERE account_number = ?";

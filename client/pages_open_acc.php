@@ -2,7 +2,6 @@
 session_start();
 include('conf/config.php');
 include('conf/checklogin.php');
-require_once 'includes/send_mail.php'; 
 check_login();
 $client_id = $_SESSION['client_id'];
 //register new account
@@ -32,18 +31,6 @@ if (isset($_POST['open_account'])) {
     //declare a varible which will be passed to alert function
     if ($stmt) {
         $success = "iBank Account Opened";
-        $subject = "Test Mail: SBBL iBanking";
-$body = "
-    <h3>প্রিয় গ্রাহক,</h3>
-    <p>এইটি একটি পরীক্ষামূলক ইমেইল যা আপনার SBBL iBanking সিস্টেমের ইমেইল ফাংশন কাজ করছে কিনা তা নিশ্চিত করার জন্য পাঠানো হয়েছে।</p>
-    <p><strong>অবস্থা:</strong> সফলভাবে ইমেইল পাঠানো হয়েছে।</p>
-    <br>
-    <p>ধন্যবাদ,</p>
-    <p>SBBL Bank</p>
-";
-
-sendEmail($client_email, $subject, $body);
-
     } else {
         $err = "Please Try Again Or Try Later";
     }

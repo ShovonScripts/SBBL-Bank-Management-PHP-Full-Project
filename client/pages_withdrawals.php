@@ -2,9 +2,6 @@
 session_start();
 include('conf/config.php');
 include('conf/checklogin.php');
-require_once 'includes/send_mail.php'; 
-require_once 'includes/send_mail.php';
-
 check_login();
 $client_id = $_SESSION['client_id'];
 

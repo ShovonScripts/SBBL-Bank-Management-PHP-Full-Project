@@ -13,13 +13,13 @@ function sendEmail($to, $subject, $messageBody) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'yourmail@gmail.com';  // NEW sender email
-        $mail->Password   = 'app_id';         // Gmail app password
+        $mail->Username   = 'your@gmail.com';  // NEW sender email
+        $mail->Password   = '-';         // Gmail app password
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
         // Sender and recipient
-        $mail->setFrom('jishovon.cco@gmail.com', 'Sonar Bangla Bank Ltd.'); 
+        $mail->setFrom('sender email', 'Sonar Bangla Bank Ltd.'); 
         $mail->addAddress($to);
 
         // Email content

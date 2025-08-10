@@ -1,6 +1,6 @@
 <?php
-    $dbuser = "u519977364_sbbl";
-    $dbpass = "Sbbl@123";  // Updated password
+    $dbuser = "root";
+    $dbpass = "";  // Updated password
     $host = "localhost";
     $db = "u519977364_sbbl";
     

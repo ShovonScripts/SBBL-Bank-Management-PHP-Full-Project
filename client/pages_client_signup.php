@@ -1,7 +1,6 @@
 <?php
 session_start();
 include('conf/config.php');
-include('includes/send_mail.php');
 
 if (isset($_POST['create_account'])) {
   $name = $_POST['name'];
@@ -18,23 +17,8 @@ if (isset($_POST['create_account'])) {
   $stmt->execute();
 
   if ($stmt) {
-  $success = true;
-
-  // ✅ Send confirmation email
-  $subject = "Your iBanking account registration has been successful!";
-  $body = "
-    <h3>প্রিয় {$name},</h3>
-    <p>আপনার রেজিস্ট্রেশন সফলভাবে সম্পন্ন হয়েছে।</p>
-    <p>আমাদের টিম আপনার তথ্য যাচাই করে ২৪ ঘণ্টার মধ্যে একাউন্ট অ্যাকটিভ করবে।</p>
-    <br>
-    <p>📞 যদি কোনো প্রশ্ন থাকে, আমাদের হেল্পলাইন নম্বরে যোগাযোগ করুন।</p>
-    <br>
-    <p>ধন্যবাদ,<br>Sonar Bangla Bank</p>
-  ";
-  sendEmail($email, $subject, $body);
-} 
-
-else {
+    $success = true;
+  } else {
     $err = true;
   }
 }
